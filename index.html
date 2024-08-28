@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trekking Adventures</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
       /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, input, button, textarea {
@@ -51,20 +52,19 @@ nav ul li a {
 
 /* Hero Section Styles */
 .hero {
-    background: url('https://ihplb.b-cdn.net/wp-content/uploads/2020/08/beas-kund-trek-in-himachal-pradesh.png') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1497501849790-78f74380d9d3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJla2tpbmd8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
-
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
@@ -81,6 +81,28 @@ nav ul li a {
 
 .btn-primary:hover {
     background-color: white;
+}
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e8e8e8; /* Optional: background color for contrast */
+    color: #333;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about .btn-primary {
+    margin-top: 20px;
 }
 
 /* Gallery Section Styles */
@@ -123,16 +145,13 @@ nav ul li a {
     padding: 0 1rem 1rem;
     font-size: 1rem;
 }
-
 /* Contact Section Styles */
 .contact {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXeBBEBd2XNYv6kkClOkRaFfEXaESn3zdtUA&s') no-repeat center center/cover;
+    background: url('https://blogsmedia.s3.amazonaws.com/blog/wp-content/uploads/2016/02/07183825/MG_0128.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    text-align: center;
     color: black;
     padding: 4rem 2rem;
     text-align: center;
@@ -170,15 +189,84 @@ nav ul li a {
 .contact button:hover {
     background-color: black;
 }
+footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        /* Original brand colors for social icons */
+ .fa-instagram {
+            color: #E4405F;
+        }
+
+        .fa-facebook {
+            color: #1877F2;
+        }
+
+        .fa-twitter {
+            color: #1DA1F2;
+        }
+
+        /* Hover effect */
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+
+
+  /* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .gallery {
+        padding: 30px 20px;
+    }
+
+    .contact {
+        padding: 30px 20px;
+    }
+}
+
   
  </style>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">Trekking Adventures</div>
-        <ul>
+        <div class="logo">Trekking Adventure </div>
+       <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#destinations">Destinations</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -192,6 +280,14 @@ nav ul li a {
             <button class="btn-primary" onclick="scrollToSection('destinations')">Explore Destinations</button>
         </div>
     </section>
+
+    <!-- About Us Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Welcome to Trekking Adventures! We are passionate about providing unforgettable trekking experiences across the world's most stunning landscapes. Our mission is to inspire a love for adventure and the great outdoors by offering guided treks that are safe, sustainable, and tailored to every skill level.</p>
+    <p>We have led over a thousand treks and have a team of experienced guides who are dedicated to making every adventure memorable. Whether you're a seasoned trekker or a beginner, we have the perfect trek for you!</p>
+    <button class="btn-primary" onclick="scrollToSection('contact')">Contact Us</button>
+</section>
 
     <!-- Destinations Gallery -->
     <section id="destinations" class="gallery">
@@ -225,7 +321,31 @@ nav ul li a {
             <button type="submit" class="btn-primary">Send Message</button>
         </form>
     </section>
+    <footer>
+        <p>&copy; 2024 All rights reserved.</p>
+        <div class="social-icons">
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Facebook Icon -->
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <!-- Twitter Icon -->
+            <a href="https://www.twitter.com/yourprofile" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </footer>
 <script>
+    // JavaScript to handle smooth scrolling to sections
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
     // Smooth scrolling to sections
 function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
