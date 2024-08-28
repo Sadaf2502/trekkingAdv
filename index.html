@@ -218,74 +218,63 @@ footer {
         .social-icons a:hover {
             opacity: 0.8;
         }
-       
-    
-   /* Media Queries for responsive design */
-@media (max-width: 1024px) {
-    /* Tablet and mobile view */
+       /* Mobile devices (less than 768px wide) */
+@media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: black;
+        display: none; /* Hide menu initially */
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        transition: left 0.3s ease-in-out;
+        background-color: black;
+        flex-direction: column;
+        transition: transform 0.3s ease-in-out;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    nav ul.show {
+        display: flex; /* Show menu on toggle */
+        transform: translateY(0);
     }
 
     .hero {
-        height: auto; /* Adjust hero section height */
-        padding: 50px 20px;
+        height: auto;
+        padding: 30px 20px;
     }
 
     .hero-content h1 {
-        font-size: 2rem; /* Reduce font size */
+        font-size: 1.8rem;
     }
 
     .hero-content p {
-        font-size: 1rem; /* Reduce font size */
+        font-size: 0.9rem;
     }
 
-    .gallery {
-        padding: 20px 10px; /* Reduce padding */
+    .about, .gallery, .contact {
+        padding: 20px 10px;
+    }
+
+    .gallery h2, .contact h2 {
+        font-size: 2rem;
     }
 
     .grid {
-        flex-direction: column; /* Stack items vertically */
-        gap: 1rem; /* Adjust spacing */
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .grid-item {
-        max-width: 100%; /* Make items full width */
-        margin: 0 auto; /* Center items */
+        max-width: 100%;
     }
 
-    .contact {
-        padding: 20px 10px; /* Adjust padding */
-    }
-
-    .contact form {
-        padding: 0 20px; /* Adjust form padding */
-    }
-
-    .contact h2 {
-        font-size: 2rem; /* Adjust font size */
-    }
-
-    footer {
-        padding: 20px; /* Adjust footer padding */
+    .contact input, .contact textarea, .contact button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
     }
 
     .social-icons a {
-        font-size: 20px; /* Adjust icon size */
+        font-size: 18px;
     }
 }
-
 </style>
 </head>
 <body>
@@ -378,7 +367,7 @@ function scrollToSection(sectionId) {
 
 // JavaScript to handle the menu toggle for mobile view
 document.addEventListener("DOMContentLoaded", function() {
-    const navToggle = document.querySelector('.nav-toggle'); // Assuming you have a toggle button
+    const navToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
 
     navToggle.addEventListener('click', function() {
