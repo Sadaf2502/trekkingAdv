@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-      /* Reset some default styles */
+    /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, input, button, textarea {
     margin: 0;
-    padding: 0;
+    padding: 0;      
     list-style: none;
     box-sizing: border-box;
 }
@@ -86,7 +86,7 @@ nav ul li a {
 .about {
     padding: 50px 20px;
     text-align: center;
-    background-color: #e8e8e8; /* Optional: background color for contrast */
+    background-color: lightblue; /* Optional: background color for contrast */
     color: #333;
 }
 
@@ -147,13 +147,9 @@ nav ul li a {
 }
 /* Contact Section Styles */
 .contact {
-    background: url('https://blogsmedia.s3.amazonaws.com/blog/wp-content/uploads/2016/02/07183825/MG_0128.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    padding: 4rem 2rem;
+    
+    background-color: lightblue;
+    padding: 40px; /* Space around the section */
     text-align: center;
 }
 
@@ -192,7 +188,7 @@ nav ul li a {
 footer {
             text-align: center;
             padding: 20px;
-            background-color: black;
+            background-color: white;
         }
 
         .social-icons {
@@ -224,41 +220,26 @@ footer {
         }
 
 
-  /* Media Queries */
-@media (max-width: 768px) {
+ @media (min-width: 577px) and (max-width: 768px) {
     nav ul {
+        flex-direction: row;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery .grid {
         flex-direction: column;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: -100%;
-        transition: left 0.3s ease;
+        gap: 1.5rem;
     }
 
-    nav ul.show {
-        left: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        padding: 100px 20px;
-    }
-
-    .gallery {
-        padding: 30px 20px;
-    }
-
-    .contact {
-        padding: 30px 20px;
+    .grid-item {
+        max-width: 80%;
     }
 }
 
-  
- </style>
+  </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -283,7 +264,7 @@ footer {
 
     <!-- About Us Section -->
 <section id="about" class="about">
-    <h2>About Us</h2>
+    <h2>Who We Are</h2>
     <p>Welcome to Trekking Adventures! We are passionate about providing unforgettable trekking experiences across the world's most stunning landscapes. Our mission is to inspire a love for adventure and the great outdoors by offering guided treks that are safe, sustainable, and tailored to every skill level.</p>
     <p>We have led over a thousand treks and have a team of experienced guides who are dedicated to making every adventure memorable. Whether you're a seasoned trekker or a beginner, we have the perfect trek for you!</p>
     <button class="btn-primary" onclick="scrollToSection('contact')">Contact Us</button>
@@ -324,6 +305,8 @@ footer {
     <footer>
         <p>&copy; 2024 All rights reserved.</p>
         <div class="social-icons">
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Email: <a href="mailto:info@trekkingadventures.com">info@trekkingadventures.com</a></p>
             <!-- Instagram Icon -->
             <a href="https://www.instagram.com/yourprofile" target="_blank">
                 <i class="fab fa-instagram"></i>
