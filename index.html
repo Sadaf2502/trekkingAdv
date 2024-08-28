@@ -365,10 +365,16 @@ function scrollToSection(sectionId) {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
-    // Smooth scrolling to sections
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
+// JavaScript to handle the menu toggle for mobile view
+document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector('.nav-toggle'); // Assuming you have a toggle button
+    const navMenu = document.querySelector('nav ul');
+
+    navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+    });
+});
+
 
 </script>
     <script src="scripts.js"></script>
