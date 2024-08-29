@@ -218,8 +218,9 @@ footer {
         .social-icons a:hover {
             opacity: 0.8;
         }
-      /* Media Queries */
-@media (max-width: 768px) {
+      /* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    /* Tablet and small laptops */
     nav ul {
         flex-direction: column;
         background-color: #333;
@@ -238,18 +239,29 @@ footer {
         margin: 10px 0;
     }
 
-    .hero {
-        padding: 100px 20px;
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    .gallery {
-        padding: 30px 20px;
+    .hero-content p {
+        font-size: 1rem;
     }
 
-    .contact {
-        padding: 30px 20px;
+    .gallery .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item {
+        max-width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .contact form {
+        width: 80%;
     }
 }
+
  
 </style>
 </head>
